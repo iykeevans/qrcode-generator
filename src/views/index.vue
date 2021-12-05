@@ -6,6 +6,7 @@
           label="Enter Url Here"
           placeholder="Placeholder"
           :rules="[(value) => !!value || 'Url is required']"
+          id="text-input"
           v-model="value"
           outlined
         />
@@ -16,6 +17,7 @@
           :loading="isLoading"
           color="primary"
           type="submit"
+          id="submit-button"
           >Submit</v-btn
         >
       </v-col>
