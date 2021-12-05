@@ -11,8 +11,9 @@
       <v-btn
         color="primary"
         elevation="2"
-        @click="$router.push('/')"
         class="mt-3"
+        id="view-back-button"
+        @click="$router.push('/')"
       >
         <v-icon>mdi-arrow-left</v-icon>
         <span class="mr-2">Back</span>

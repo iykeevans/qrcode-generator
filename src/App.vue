@@ -7,13 +7,14 @@
 
       <v-btn
         text
+        id="qrcodes-button"
         @click="$router.push('/qrcodes')"
         v-if="!$route.path.includes('qrcodes')"
       >
         <span class="mr-2">See All QRcodes</span>
       </v-btn>
 
-      <v-btn text @click="$router.push('/')" v-else>
+      <v-btn id="nav-back-button" text @click="$router.push('/')" v-else>
         <v-icon>mdi-arrow-left</v-icon>
         <span class="mr-2">Back</span>
       </v-btn>
