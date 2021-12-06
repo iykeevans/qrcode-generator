@@ -5,7 +5,7 @@
         <v-text-field
           label="Enter Url Here"
           placeholder="Placeholder"
-          :rules="[(value) => !!value || 'Url is required']"
+          :rules="urlRules"
           id="text-input"
           v-model="value"
           outlined
@@ -27,12 +27,19 @@
 
 <script>
 import { mapState } from "vuex";
+import isValidURL from "../utils/is-valid-url";
 
 export default {
   name: "Home",
   data() {
     return {
       value: "",
+      urlRules: [
+        (value) => !!value || "Url is required",
+        (value) =>
+          isValidURL(value) ||
+          "Invalid URL e.g https://google.com or google.com",
+      ],
     };
   },
 

@@ -12,13 +12,19 @@ describe("The Home View", () => {
     cy.visit("/");
   });
 
-  it("has title", () => {
+  it("app should have a title", () => {
     cy.contains("BFree Test");
   });
 
   it("should show error if input is empty", () => {
     cy.get("#submit-button").click();
     cy.contains("Url is required");
+  });
+
+  it("should show error if input is not a valid url", () => {
+    cy.get("#text-input").type("hello");
+    cy.get("#submit-button").click();
+    cy.contains("Invalid URL e.g https://google.com or google.com");
   });
 
   it("should show no data available currently", () => {
