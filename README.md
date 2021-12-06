@@ -1,4 +1,4 @@
-## This is an QR Code Generator [QRCode Generator](https://the-qrcode-gen.netlify.app/) to have a feel
+## This is an QR Code Generator [QRCode Generator](https://the-qrcode-generator.vercel.app/) to have a feel
 
 Built with Vue JS and Vuetify
 
@@ -33,20 +33,23 @@ yarn run lint
 
 - [x] Implement qrcode generation
 - [x] Implement view all qrcodes generated
+- [x] Implement app tests
 
 ### What needs to be done
 
 - [ ] Add a 404 Page for invalid routes
 
-## NOTE FOR ANYONE INTERESTED IN CONTRIBUTING
+## NOTE FOR ANYONE INTERESTED IN CONTRIBUTING OR USING THIS APP
 
-- Add reusable components to the src/components folder
+- Because the app is making a fetch request to a url that doesn't send an options response, a node reverse proxy server was setup using the cors anywhere package to avoid the cors issue. This is used in the `src/services folder` as the baseURL
 
-- Follow the simple process of the api factory located in src/services folder, this is the inteface where all external api calls are made.
+- Add reusable components to the `src/components` folder
+
+- Follow the simple process of the api factory located in `src/services` folder, this is the inteface that handles external api calls.
 
 ## Deployment
 
-This App was deployed with [Netlify](https://netlify.com/)
+This App was deployed with [Vercel](https://vercel.com/)
 
 ## Lastly
 
