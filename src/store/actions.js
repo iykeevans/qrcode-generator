@@ -9,6 +9,7 @@ const actions = {
 
       commit("SET_QR_CODE", { url: payload, qrCode: imageObjectURL });
     } catch (err) {
+      console.log(err);
       commit("SET_TOAST", { text: "An error occured", color: "error" });
       throw err;
     } finally {
